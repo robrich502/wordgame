@@ -16,8 +16,7 @@ Some features that need to be added
      1. Limit user to only x guess attempts.. Such as 5.  After 5 is hit print that they lost the game.
   
   * Associate hints with each word... So maybe we use a random function to pick a word, then the user will
-    be displayed a hint associated with that word.  T/hen the user has 5 attempts to guess the meaning of
-    the word.  
+    be displayed a hint associated with that word.  Then the user has 5 attempts to guess the word.
     
 
 If you can think of anymore cool features, just add it to this list.
