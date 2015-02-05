@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Guess The Word</title>
+    <style>
+        .container {
+            width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        var secretWords = ["kentucky", "ohio", "indiana", "virginia", "tennesse", "florida", "alabama"];
+
+        function CheckWord()
+        {
+            var word = document.getElementById('txtGuess').value;
+
+            for (var x = 0; x < secretWords.length; x++)
+            {
+                if(word == secretWords[x])
+                {
+                    alert("Congratulations, you have guessed the correct word!");
+                    break;
+                }
+            }
+        }
+    </script>
+</head>
+<body class="container">
+    <header>
+        <h1>Word Guessing Game</h1>
+    </header>   
+    <form onsubmit="CheckWord()">
+        What word do you guess?<input type="text" id="txtGuess" name="txtGuess" />
+    </form>
+    <footer>        
+    </footer>
+</body>
+</html>
