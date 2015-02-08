@@ -48,3 +48,12 @@ input {
     border-radius: 5px;
 }
 
+#txtGuess {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#submit {
+    padding: 1% 2%;
+}

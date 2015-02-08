@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
@@ -14,7 +14,7 @@
         { word: "kentucky", hint: "a blue grass state" },
         { word: "indiana", hint: "bobby knight was basketball coach in this state" },
         { word: "florida", hint: "the sunshine state.  known for it's oranges." },
-        { word: "tennesse", hint: "country musicians, line dancing, and home of gatlinburg" },
+        { word: "tennessee", hint: "country musicians, line dancing, and home of gatlinburg" },
         { word: "virginia", hint: "home to the US Navy's 5th fleet and many other military bases." }
         ];
 
@@ -64,9 +64,9 @@
     </header>
     <div class="container">
        <div>
-           <label>What State do you guess?</label>
+           <label id="question">What State do you guess?</label>
             <input type="text" id="txtGuess" name="txtGuess" />
-            <button type="button" onclick="CheckWord()">Submit</button>
+            <button id="submit" type="button" onclick="CheckWord()">Submit</button>
        </div>
     <footer>
     </footer>
