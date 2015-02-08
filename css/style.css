@@ -48,3 +48,31 @@ input {
     border-radius: 5px;
 }
 
+#txtGuess {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#submit {
+    padding: 1% 2%;
+}
+
+#score {
+    padding: 20px;
+    background-color: white;
+    width: 50%;
+    max-width: 450px;
+    position: absolute;
+    top: -60px;
+    left: 0; /* centers from left */
+    right: 0; /* centers from right */
+/*    display: none;  hide on load */
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.3em;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.7);
+}
