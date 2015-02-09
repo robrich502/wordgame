@@ -48,6 +48,10 @@ input {
     border-radius: 5px;
 }
 
+#hint {
+    margin: 10px;
+    font-size: 1.6em;
+}
 #txtGuess {
     display: block;
     margin-left: auto;
