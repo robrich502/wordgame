@@ -66,6 +66,14 @@
             if (word.toLowerCase() == currentSecretWord.word) {
                 updateScore(true);
                 alert("Congratulations, you have guessed the correct word!");
+                
+                // Remove that question and go to another question.
+                var completed = secretWords.indexOf(currentSecretWord);
+                if (completed !== -1) {
+                    secretWords.splice(completed, 1);
+                }
+                OnLoad();
+
             } else {
                 updateScore(false);
                 alert("You are WRONG!!!! Try again.");
@@ -126,3 +134,9 @@
 </body>
 
 </html>
+
+
+Other tasks: 
+1. Stop the score from resetting after incorrect answers.
+2. Clear text field when loading a new question.
+3. Add more questions.
