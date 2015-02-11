@@ -10,7 +10,6 @@
             // in a real scenario, the data would come from calls to a database, or a web service.
             var secretWords = [
             {
-<<<<<<< HEAD
             word: "kentucky",
             hint: "a blue grass state"
             },
@@ -29,7 +28,6 @@
             {
             word: "virginia",
             hint: "home to the US Navy's 5th fleet and many other military bases."
-=======
                 word: "kentucky",
                 hint: "A blue grass state."
             },
@@ -68,7 +66,6 @@
             {
                 word: "texas",
                 hint: "Home of cowboys and cattle."
->>>>>>> upstream/master
             }
             ];
             var currentSecretWord;
@@ -88,24 +85,19 @@
             function OnLoad() {
             currentSecretWord = GetSecretWord();
             document.getElementById('hint').innerHTML = "Hint: " + currentSecretWord.hint;
-<<<<<<< HEAD
             }
             function CheckWord() {
-=======
-
             // Focus back on the text input for the next question. --Korey
             document.getElementById('txtGuess').focus();            
         }
 
         function CheckWord() {
->>>>>>> upstream/master
             var word = document.getElementById('txtGuess').value;
             // these console.log statements are used for debugging purposes
             console.log(word);
             console.log(currentSecretWord.hint);
             console.log(currentSecretWord.word);
             if (word.toLowerCase() == currentSecretWord.word) {
-<<<<<<< HEAD
             updateScore(true);
             alert("Congratulations, you have guessed the correct word!");
             } else {
@@ -134,7 +126,6 @@
                 document.getElementById('txtGuess').select();              
                 // Deleted to not reset the score to 0 for each wrong answer. --Korey
                 // score = 0;
->>>>>>> upstream/master
             }
             function updateScore(result) {
             // display score div if not yet displayed
@@ -150,11 +141,8 @@
             
             // Changed to keep the score from resetting to 0 on subsequent questions. Could it also just be deleted? --Korey
             else {
-<<<<<<< HEAD
             score = 0;
-=======
-                score = score;
->>>>>>> upstream/master
+            score = score;
             }
             document.getElementById('score').innerHTML = "Score: " + score;
             }
@@ -182,7 +170,6 @@
         </header>
     <div class="container">
         <div>
-<<<<<<< HEAD
         <label id="question">What State do you guess?</label>
         <input type="text" id="txtGuess" name="txtGuess" />
         <button id="submit" type="button" onclick="CheckWord()">Submit</button>
@@ -191,7 +178,6 @@
     </footer>
    </body>
 </html>
-=======
             <label id="question">What State do you guess?</label>
             <!-- Added autofocus attribute. --Korey -->
             <input type="text" id="txtGuess" name="txtGuess" autofocus>   
@@ -204,4 +190,3 @@
 </html>
 
 
->>>>>>> upstream/master
