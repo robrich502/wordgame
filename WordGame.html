@@ -52,6 +52,9 @@
         function OnLoad() {
             currentSecretWord = GetSecretWord();
             document.getElementById('hint').innerHTML = "Hint: " + currentSecretWord.hint;
+
+            // Autofocus back on the text input for the next question. --Korey
+            document.getElementById('txtGuess').autofocus = "true";
         }
 
         function CheckWord() {
@@ -67,17 +70,21 @@
                 updateScore(true);
                 alert("Congratulations, you have guessed the correct word!");
                 
-                // Remove that question and go to another question.
+                // Remove that question and go to another question. --Korey
+                // Also, reset the text field to be blank. --Korey
                 var completed = secretWords.indexOf(currentSecretWord);
                 if (completed !== -1) {
                     secretWords.splice(completed, 1);
                 }
+                document.getElementById('txtGuess').value = "";
                 OnLoad();
 
             } else {
                 updateScore(false);
                 alert("You are WRONG!!!! Try again.");
-                score = 0;
+                
+                // Deleted to not reset the score to 0 for each wrong answer. --Korey
+                // score = 0;
             }
         }
 
@@ -93,8 +100,10 @@
                 score++;
             }
             // logic for incorrect answer
+            
+            // I changed this to keep the score from resetting to 0 on subsequent questions. Could you also just delete the else statement? --Korey
             else {
-                score = 0;
+                score = score;
             }
             document.getElementById('score').innerHTML = "Score: " + score;
         }
@@ -126,7 +135,7 @@
     <div class="container">
         <div>
             <label id="question">What State do you guess?</label>
-            <input type="text" id="txtGuess" name="txtGuess" />
+            <input type="text" id="txtGuess" name="txtGuess" autofocus>  // Added autofocus attribute. --Korey
             <button id="submit" type="button" onclick="CheckWord()">Submit</button>
         </div>
         <footer>
@@ -136,7 +145,8 @@
 </html>
 
 
-Other tasks: 
+<!-- Other tasks: 
 1. Stop the score from resetting after incorrect answers.
 2. Clear text field when loading a new question.
-3. Add more questions.
+3. Focus on the text input after each question.
+4. Add more questions. -->
