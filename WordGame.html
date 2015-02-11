@@ -53,8 +53,8 @@
             currentSecretWord = GetSecretWord();
             document.getElementById('hint').innerHTML = "Hint: " + currentSecretWord.hint;
 
-            // Autofocus back on the text input for the next question. --Korey
-            document.getElementById('txtGuess').autofocus = "true";
+            // Focus back on the text input for the next question. --Korey
+            document.getElementById('txtGuess').focus();            
         }
 
         function CheckWord() {
@@ -76,13 +76,14 @@
                 if (completed !== -1) {
                     secretWords.splice(completed, 1);
                 }
-                document.getElementById('txtGuess').value = "";
+                document.getElementById('txtGuess').value = "";                
                 OnLoad();
 
             } else {
                 updateScore(false);
-                alert("You are WRONG!!!! Try again.");
-                
+                alert("You are WRONG!!!! Try again.");   
+                // After wrong answer, focus and select the text in the text field. --Korey
+                document.getElementById('txtGuess').select();              
                 // Deleted to not reset the score to 0 for each wrong answer. --Korey
                 // score = 0;
             }
@@ -135,7 +136,8 @@
     <div class="container">
         <div>
             <label id="question">What State do you guess?</label>
-            <input type="text" id="txtGuess" name="txtGuess" autofocus>  // Added autofocus attribute. --Korey
+            <!-- Added autofocus attribute. --Korey -->
+            <input type="text" id="txtGuess" name="txtGuess" autofocus>   
             <button id="submit" type="button" onclick="CheckWord()">Submit</button>
         </div>
         <footer>
