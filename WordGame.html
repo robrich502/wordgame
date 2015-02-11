@@ -1,128 +1,113 @@
 <!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
-    <meta charset="utf-8" />
-    <title>Word Game - US States Edition</title>
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+<meta charset="utf-8" />
+<title>Word Game - US States Edition</title>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/style.css">
     <script>
-        // initialize our data store.  our data store for this game happens to be an array built into the webpage.
-        // in a real scenario, the data would come from calls to a database, or a web service.
-        var secretWords = [
+            // initialize our data store. our data store for this game happens to be an array built into the webpage.
+            // in a real scenario, the data would come from calls to a database, or a web service.
+            var secretWords = [
             {
-                word: "kentucky",
-                hint: "a blue grass state"
+            word: "kentucky",
+            hint: "a blue grass state"
             },
             {
-                word: "indiana",
-                hint: "bobby knight was basketball coach in this state"
+            word: "indiana",
+            hint: "bobby knight was basketball coach in this state"
             },
             {
-                word: "florida",
-                hint: "the sunshine state.  known for it's oranges."
+            word: "florida",
+            hint: "the sunshine state. known for it's oranges."
             },
             {
-                word: "tennessee",
-                hint: "country musicians, line dancing, and home of gatlinburg"
+            word: "tennessee",
+            hint: "country musicians, line dancing, and home of gatlinburg"
             },
             {
-                word: "virginia",
-                hint: "home to the US Navy's 5th fleet and many other military bases."
+            word: "virginia",
+            hint: "home to the US Navy's 5th fleet and many other military bases."
             }
-        ];
-
-        var currentSecretWord;
-        var score = 0;
-        var scoreLoaded = false;
-
-        // this function generates a random number and picks one of the items out of the array we declared above.
-        // the function returns a object with two properties which are strings (word, and hint);
-        function GetSecretWord() {
+            ];
+            var currentSecretWord;
+            var score = 0;
+            var scoreLoaded = false;
+            // this function generates a random number and picks one of the items out of the array we declared above.
+            // the function returns a object with two properties which are strings (word, and hint);
+            function GetSecretWord() {
             var min = 0,
-                max = secretWords.length - 1;
+            max = secretWords.length - 1;
             var rand = min + Math.random() * (max + 1 - min);
             var randIndex = Math.floor(rand);
             return secretWords[randIndex];
-        }
-
-        // this function is currently assigned to the OnLoad event of the body of the document.  So when the OnLoad event fires off
-        // for the body of the html document, the code in this function will automatically execute.
-        function OnLoad() {
+            }
+            // this function is currently assigned to the OnLoad event of the body of the document. So when the OnLoad event fires off
+            // for the body of the html document, the code in this function will automatically execute.
+            function OnLoad() {
             currentSecretWord = GetSecretWord();
             document.getElementById('hint').innerHTML = "Hint: " + currentSecretWord.hint;
-        }
-
-        function CheckWord() {
+            }
+            function CheckWord() {
             var word = document.getElementById('txtGuess').value;
-
             // these console.log statements are used for debugging purposes
             console.log(word);
             console.log(currentSecretWord.hint);
             console.log(currentSecretWord.word);
-
-
             if (word.toLowerCase() == currentSecretWord.word) {
-                updateScore(true);
-                alert("Congratulations, you have guessed the correct word!");
+            updateScore(true);
+            alert("Congratulations, you have guessed the correct word!");
             } else {
-                updateScore(false);
-                alert("You are WRONG!!!! Try again.");
-                score = 0;
+            updateScore(false);
+            alert("You are WRONG!!!! Try again.");
+            score = 0;
             }
-        }
-
-        function updateScore(result) {
+            }
+            function updateScore(result) {
             // display score div if not yet displayed
             if(scoreLoaded == false) {
-                loadScoreDiv();
-                scoreLoaded = true;
+            loadScoreDiv();
+            scoreLoaded = true;
             }
-
             // logic for correct answer
             if(result) {
-                score++;
+            score++;
             }
             // logic for incorrect answer
             else {
-                score = 0;
+            score = 0;
             }
             document.getElementById('score').innerHTML = "Score: " + score;
-        }
-
-        function loadScoreDiv() {
-
+            }
+            function loadScoreDiv() {
             var scoreDiv = document.getElementById('score');
             var topOffset = -60; //push the element above the viewport
             scoreDiv.style.top = topOffset;
             scoreDiv.style.display = "block";
             var loadScore = setInterval(function () {
-                topOffset += 1;
-                scoreDiv.style.top = topOffset + "px";
-                if (topOffset >= 0) {
-                    clearInterval(loadScore);
-                }
+            topOffset += 1;
+            scoreDiv.style.top = topOffset + "px";
+            if (topOffset >= 0) {
+            clearInterval(loadScore);
+            }
             }, 5);
-        }
+            }
     </script>
 </head>
-
-<body onload="OnLoad()">
-    <header>
+    <body onload="OnLoad()">
+        <header>
         <h1>Word Game</h1>
         <h1>US States Edition</h1>
         <h2 id="hint"></h2>
         <div id="score"></div>
-    </header>
+        </header>
     <div class="container">
         <div>
-            <label id="question">What State do you guess?</label>
-            <input type="text" id="txtGuess" name="txtGuess" />
-            <button id="submit" type="button" onclick="CheckWord()">Submit</button>
+        <label id="question">What State do you guess?</label>
+        <input type="text" id="txtGuess" name="txtGuess" />
+        <button id="submit" type="button" onclick="CheckWord()">Submit</button>
         </div>
-        <footer>
-        </footer>
-</body>
-
+    <footer>
+    </footer>
+   </body>
 </html>
