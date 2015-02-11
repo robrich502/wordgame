@@ -13,23 +13,43 @@
         var secretWords = [
             {
                 word: "kentucky",
-                hint: "a blue grass state"
+                hint: "A blue grass state."
             },
             {
                 word: "indiana",
-                hint: "bobby knight was basketball coach in this state"
+                hint: "Bobby Knight was basketball coach in this state."
             },
             {
                 word: "florida",
-                hint: "the sunshine state.  known for it's oranges."
+                hint: "The sunshine state, known for it's oranges."
             },
             {
                 word: "tennessee",
-                hint: "country musicians, line dancing, and home of gatlinburg"
+                hint: "Country musicians, line dancing, and home of Gatlinburg"
             },
             {
                 word: "virginia",
-                hint: "home to the US Navy's 5th fleet and many other military bases."
+                hint: "Home to the US Navy's 5th fleet and many other military bases."
+            },
+            {
+                word: "new york",
+                hint: "The big apple."
+            },
+            {
+                word: "georgia",
+                hint: "Famous for peaches."
+            },
+            {
+                word: "california",
+                hint: "Full of movie stars."
+            },
+            {
+                word: "ohio",
+                hint: "Buckeyes."
+            },
+            {
+                word: "texas",
+                hint: "Home of cowboys and cattle."
             }
         ];
 
@@ -52,6 +72,9 @@
         function OnLoad() {
             currentSecretWord = GetSecretWord();
             document.getElementById('hint').innerHTML = "Hint: " + currentSecretWord.hint;
+
+            // Focus back on the text input for the next question. --Korey
+            document.getElementById('txtGuess').focus();            
         }
 
         function CheckWord() {
@@ -66,10 +89,24 @@
             if (word.toLowerCase() == currentSecretWord.word) {
                 updateScore(true);
                 alert("Congratulations, you have guessed the correct word!");
+                
+                // Remove that question and go to another question.
+                // Also, reset the text field to be blank. --Korey
+                var completed = secretWords.indexOf(currentSecretWord);
+                if (completed !== -1) {
+                    secretWords.splice(completed, 1);
+                }
+                document.getElementById('txtGuess').value = "";                
+                OnLoad();
+
             } else {
                 updateScore(false);
-                alert("You are WRONG!!!! Try again.");
-                score = 0;
+                alert("You are WRONG!!!! Try again.");   
+                
+                // After wrong answer, focus and select the text in the text field. --Korey
+                document.getElementById('txtGuess').select();              
+                // Deleted to not reset the score to 0 for each wrong answer. --Korey
+                // score = 0;
             }
         }
 
@@ -85,8 +122,10 @@
                 score++;
             }
             // logic for incorrect answer
+            
+            // Changed to keep the score from resetting to 0 on subsequent questions. Could it also just be deleted? --Korey
             else {
-                score = 0;
+                score = score;
             }
             document.getElementById('score').innerHTML = "Score: " + score;
         }
@@ -118,7 +157,8 @@
     <div class="container">
         <div>
             <label id="question">What State do you guess?</label>
-            <input type="text" id="txtGuess" name="txtGuess" />
+            <!-- Added autofocus attribute. --Korey -->
+            <input type="text" id="txtGuess" name="txtGuess" autofocus>   
             <button id="submit" type="button" onclick="CheckWord()">Submit</button>
         </div>
         <footer>
@@ -126,3 +166,5 @@
 </body>
 
 </html>
+
+
