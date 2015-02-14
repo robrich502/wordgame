@@ -1,33 +1,38 @@
 # WordGame
-HTML5 and JavaScript game.  User has to guess the correct word!  Yay!
 
-HOW TO CLONE - (by Rob Richardson)
+SET-UP TO WORK WITH WORDGAME
 
-Windows OS
-   1.  Log into github. goto page https://github.com/robrich22/wordgame
-   2.  Click Fork Repo on the wordgame repo page.
-   3.  Open Command Prompt on your computer.
-   4.  Goto your local directory where you store code.  
-   5.  type: git clone https://github.com/[your-username-here]/WordGame.git
-   6.  now you can start working on the project with your local repository.
+1.  FORK THE REPOSITORY to your GitHub Account!
+2.  Open the Command Line on Windows or Terminal on MAC
+3.  Select the folder that you would like to use for the wordgame.
+4.  git clone https://github.com/[insert your username]/WordGame.git
 
-HOW TO PUSH YOUR CHANGES BACK TO GIT
-   1.  Open Command Prompt
-   2.  Goto the local directory where you have the project stored.
-   3.  type: git add -a
-   3.  type: git commit -m 'i made xyz changes to file. added xyz feature.'
-   4.  type: git push origin master
+SET-UP REMOTES  **IMPORTANT**
 
-HOW TO RETRIEVE CHANGES MADE TO YOUR MASTER BRANCH ON GITHUB
-   1.  Open Command Prompt
-   2.  Goto the local directory where you have the project stored.
-   3.  type: git fetch origin
-   
-HOW TO MERGE YOUR CHANGES WITH THE MASTER wordgame project on github hosted by robrich22/wordgame
-   1.  Login to github
-   2.  Select your repo for wordgame that you previously forked, and made changes to.
-   3.  Select Pull Request
-   4.  https://help.github.com/articles/using-pull-requests/
+5.  git remote add upstream https://github.com/robrich22/WordGame.git
+6.  additional help read https://help.github.com/articles/configuring-a-remote-for-a-fork/
+
+===================================================================================
+
+SYNC YOUR FORK WITH MASTER REPO (Sync frequently, as there are always new updates)
+
+1.  git fetch upstream
+2.  git checkout master
+3.  git merge upstream/master
+
+Now your local copy is sync'ed with the UPSTREAM MASTER repo.  You now need to push the updates to your github forked version of the REPO.  You will use your updated local repo, to push the changes back to github.  It's as simple as 
+
+4.  git push 
+
+====================================================================================
+ 
+MAKE SOME CHANGES TO REPO AND PUSH THEM TO GITHUB
+
+1.  git add .
+2.  git commit -m "I made xyz changes"
+3.  git push origin master
+4.  login to github, and issue pull request on http://github.com/robrich22/WordGame.git repo.
+
    
 
 Macintosh
