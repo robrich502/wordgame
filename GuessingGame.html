@@ -3,38 +3,44 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Guess The Word</title>
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script>
-        var secretWords = ["kentucky", "ohio", "indiana", "virginia", "tennesse", "florida", "alabama"];
+  <meta charset="utf-8" />
+  <title>Guess The Word</title>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 
-        function CheckWord() {
-            var word = document.getElementById('txtGuess').value;
+  <script>
+    var secretWords = ["kentucky", "ohio", "indiana", "virginia", "tennesse", "florida", "alabama"];
 
-            for (var x = 0; x < secretWords.length; x++) {
-                if (word.toLowerCase() == secretWords[x]) {
-                    alert("Congratulations, you have guessed the correct word!");
-                    break;
-                }
-            }
+    function CheckWord() {
+      var word = document.getElementById('txtGuess').value;
+
+      for (var x = 0; x < secretWords.length; x++) {
+        if (word.toLowerCase() == secretWords[x]) {;
+          break;
+          Else()
+
         }
-    </script>
+
+      }
+    }
+  </script>
 </head>
 
 <body>
-    <header>
-        <h1>Word Guessing Game</h1>
-    </header>
-    <div class="container">
-        <form onsubmit="CheckWord()">
-            What word do you guess?<br>
-            <input type="text" id="txtGuess" name="txtGuess" />
-        </form>
-    </div>
-    <footer>
-    </footer>
+  <header>
+    <h1>Word Guessing Game</h1>
+
+  </header>
+  <div class="container">
+    <form onsubmit="CheckWord()">
+      What word do you guess?
+      <br>
+      <input type="text" id="txtGuess" name="txtGuess" />
+    </form>
+  </div>
+  <footer>
+  </footer>
 </body>
 
 </html>
