@@ -57,3 +57,8 @@ input {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
+
+footer {
+  text-align: center;
+  font-family: bold monospace;
+}
