@@ -13,12 +13,20 @@
 
 <body onload="OnLoad()">
     <header>
-        <h1>Word Game</h1>
-       <h2>US States!</h2>
+        <h1>Word Game - United States Edition</h1>
+            <h2>US States!</h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">About this game</a></li>
+                    <li><a href="WordGame.html">Play Game</a></li>
+                    <li><a href="players.html">View Top Scores</a></li>
+                    
+                </ul>
+            </nav>
+        </header>
+    <div class="container">
         <h2 id="hint"></h2>
         <div id="score"></div>
-    </header>
-    <div class="container">
         <div>
             <label id="question">What State do you guess?</label>
             <!-- Added autofocus attribute. --Korey -->
@@ -26,7 +34,9 @@
             <button id="submit" type="button" onclick="CheckWord()">Submit</button>
         </div>
       <div id="result"><p id="resultText"></p></div>
+    </div>
         <footer>
+            <div><p>add copy right in footer</p></div>    
         </footer>
 </body>
 
