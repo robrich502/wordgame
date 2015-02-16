@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -24,15 +23,11 @@ form {
 h1 {
   color: blue;
   /*changed h1 to blue*/
-
   /* background-color: black; */
   /* removed background color behind h1, as it was too prominent -Joshua Sachtleben */
+
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   font-size: 3em;
-}
-
-h1:hover {
-  background-color: yellow;
 }
 
 header {
@@ -61,34 +56,56 @@ input {
 }
 
 #hint {
-    margin: 10px;
-    font-size: 1.6em;
+  margin: 10px;
+  font-size: 1.6em;
 }
+
 #txtGuess {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #submit {
-    padding: 1% 2%;
+  padding: 1% 2%;
 }
 
 #score {
-    padding: 20px;
-    background-color: white;
-    width: 50%;
-    max-width: 450px;
-    position: absolute;
-    top: -60px;
-    left: 0; /* centers from left */
-    right: 0; /* centers from right */
-/*    display: none;  hide on load */
-    -webkit-border-radius: 0 0 10px 10px;
-    -moz-border-radius: 0 0 10px 10px;
-    border-radius: 0 0 10px 10px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1.3em;
-    box-shadow: 0 2px 2px rgba(0,0,0,0.7);
+  padding: 20px;
+  background-color: white;
+  width: 50%;
+  max-width: 450px;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  /* centers from left */
+
+  right: 0;
+  /* centers from right */
+  /*    display: none;  hide on load */
+
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.3em;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+#result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
+}
+
+#result p {
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-size: 3em;
 }
