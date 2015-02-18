@@ -20,7 +20,7 @@
                     <li><a href="index.html">About this game</a></li>
                     <li><a href="WordGame.html">Play Game</a></li>
                     <li><a href="players.html">View Top Scores</a></li>
-                    
+
                 </ul>
             </nav>
         </header>
@@ -33,10 +33,13 @@
             <input type="text" id="txtGuess" name="txtGuess" autofocus>   
             <button id="submit" type="button" onclick="CheckWord()">Submit</button>
         </div>
-      <div id="result"><p id="resultText"></p></div>
-    </div>
+      <div id="result">
+        <p id="resultText"></p>
+        <p id="guessesText"></p>
+        <button id="restart" type="button" onclick="restartGame()">Restart?</button>
+      </div>
         <footer>
-            <div><p>add copy right in footer</p></div>    
+            <div><p>add copy right in footer</p></div>
         </footer>
 </body>
 

@@ -66,7 +66,8 @@ input {
   margin-right: auto;
 }
 
-#submit {
+#submit,
+#restart {
   padding: 1% 2%;
 }
 
@@ -104,8 +105,17 @@ input {
   display: none;
 }
 
-#result p {
+#resultText {
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   font-size: 3em;
+}
+
+#guessesText {
+  font-size: 1.5em;
+}
+
+#restart {
+  display: none;
+  margin: 10px 0;
 }
