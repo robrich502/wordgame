@@ -1,38 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-size: 1em;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-html,
-body {
-  background: url(../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: 'Ubuntu', sans-serif;
-  width: 100%;
-  height: 100%;
-  background-color: steelblue;
-}
-
-form {
-  font-size: 1.25em;
-}
-
-h1 {
-  color: blue;
-  /*changed h1 to blue*/
-
-  background-color: black;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  font-size: 3em;
-}
-
-h1:hover {
-  background-color: yellow;
-}
-
 header {
   width: 100%;
   text-align: center;
@@ -46,6 +11,15 @@ input {
   text-align: center;
 }
 
+#page {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 100px;
+}
+
 .container {
   width: 450px;
   margin: 0 auto;
@@ -57,8 +31,129 @@ input {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-
+/*
 footer {
   text-align: center;
   font-family: bold monospace;
+}
+*/
+
+#hint {
+  margin: 10px;
+  font-size: 1.6em;
+}
+
+#txtGuess {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#submit,
+#restart {
+  padding: 1% 2%;
+}
+
+#score {
+  padding: 20px;
+  background-color: white;
+  width: 50%;
+  max-width: 450px;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  /* centers from left */
+
+  right: 0;
+  /* centers from right */
+  /*    display: none;  hide on load */
+
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.3em;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+#result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
+}
+
+#resultText {
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-size: 3em;
+}
+
+#guessesText {
+  font-size: 1.5em;
+}
+
+#restart {
+  display: none;
+  margin: 10px 0;
+  >>>>>>> upstream/master
+}
+
+.footer {
+  width: 100%;
+  clear: both;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  background-color: #ccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  text-align: center;
+}
+
+html,
+body {
+  background: url(../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+  width: 100%;
+  /*  height: 100%;*/
+
+  background-color: steelblue;
+}
+
+form {
+  font-size: 1.25em;
+}
+
+h1 {
+  color: blue;
+  /*changed h1 to blue*/
+  /* background-color: black; */
+  /* removed background color behind h1, as it was too prominent -Joshua Sachtleben */
+
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-size: 3em;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+nav {
+  padding-top: 100px;
+  text-align: center;
 }
