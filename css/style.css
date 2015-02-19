@@ -4,7 +4,9 @@
   font-size: 1em;
   font-family: 'Ubuntu', sans-serif;
 }
-
+a {  /* added global link style **/
+    text-decoration: none;
+}
 html,
 body {
   background: url(../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg);
@@ -33,9 +35,43 @@ h1 {
 header {
   width: 100%;
   text-align: center;
-  padding: 75px 0;
+  padding: 50px 0;
 }
+nav ul li.selected {
+    /* add style to navigation - errin and added class to navigation */
+    border-bottom-left-radius: 25%;
+    border-top-right-radius: 25%;
+    border-style: inset;
+    font-size: 1em;
+}
+nav {
+    /* add style to navigation - errin */
+    max-width: inherit;
+    height: 150px;
+    margin: 1%;
+    background: linear-gradient(to top, silver, steelblue, transparent 95%); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav ul {
+    /* add style to navigation - errin * http://css-tricks.com/using-flexbox, http://caniuse.com/#search=flex-box*//
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+}  
 
+nav ul li {
+    /* add style to navigation - errin *  source http://css-tricks.com/using-flexbox, and http://caniuse.com/#search=flex-box*//
+     -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin: 5% 5%;
+    list-style: none;
+    padding: 15px;
+    }
 input {
   color: grey;
   margin: 10px 0;
