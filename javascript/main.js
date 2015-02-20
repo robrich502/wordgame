@@ -1,8 +1,5 @@
 // JavaScript source code
 
-// initialize our data store.  our data store for this game happens to be an array built into the webpage.
-// in a real scenario, the data would come from calls to a database, or a web service.
-
 var currentSecretWord;
 var score = 0;
 var finalScore = 0;
@@ -23,7 +20,7 @@ function GetSecretWord() {
 // for the body of the html document, the code in this function will automatically execute.
 function OnLoad() {
   currentSecretWord = GetSecretWord();
-  document.getElementById('hint').innerHTML = "Hint: " + currentSecretWord.hint;
+  document.getElementById('hintbox').innerHTML = "<p>" + currentSecretWord.hint + "</p>";
   guesses = 5;
   // Focus back on the text input for the next question. --Korey
   document.getElementById('txtGuess').focus();
@@ -31,12 +28,6 @@ function OnLoad() {
 
 function CheckWord() {
   var word = document.getElementById('txtGuess').value;
-
-  // these console.log statements are used for debugging purposes
-//  console.log(word);
-//  console.log(currentSecretWord.hint);
-//  console.log(currentSecretWord.word);
-
 
   if (word.toLowerCase() == currentSecretWord.word) {
     updateScore(true);
@@ -79,12 +70,12 @@ function updateScore(result) {
       score = 0;
     }
   }
-  document.getElementById('score').innerHTML = "Score: " + score;
+  document.getElementById('scorebox').innerHTML = "Score: " + score;
 }
 
 function loadScoreDiv() {
 
-  var scoreDiv = document.getElementById('score');
+  var scoreDiv = document.getElementById('scorebox');
   var topOffset = -60; //push the element above the viewport
   scoreDiv.style.top = topOffset;
   scoreDiv.style.display = "block";
@@ -98,7 +89,7 @@ function loadScoreDiv() {
 }
 
 function displayResult(result) {
-  var resultDiv = document.getElementById('result');
+  var resultDiv = document.getElementById('resultbox');
   var resultDivText = document.getElementById('resultText');
   var guessesDivText = document.getElementById('guessesText');
   var submitButton = document.getElementById('submit');
@@ -130,7 +121,7 @@ function displayResult(result) {
 }
 
 function restartGame() {
-  var resultDiv = document.getElementById('result');
+  var resultDiv = document.getElementById('resultbox');
   var submitButton = document.getElementById('submit');
   var restartButton = document.getElementById('restart');
   resultDiv.style.display = 'none';

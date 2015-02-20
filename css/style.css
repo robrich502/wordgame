@@ -1,157 +1,152 @@
+
+/*********************
+  Global Styles
+*********************/
+
 * {
-  margin: 0;
-  padding: 0;
-  font-size: 1em;
-  font-family: 'Ubuntu', sans-serif;
-}
-a {  /* added global link style **/
-    text-decoration: none;
-}
-html,
-body {
-  background: url(../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: 'Ubuntu', sans-serif;
-  width: 100%;
-  height: 100%;
-  background-color: steelblue;
+    font-size: 1em;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-form {
-  font-size: 1.25em;
+a {
+    text-decoration: none;
+}
+
+html {
+    background: url(../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {
-  color: blue;
-  /*changed h1 to blue*/
-  /* background-color: black; */
-  /* removed background color behind h1, as it was too prominent -Joshua Sachtleben */
-
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  font-size: 3em;
+    color: blue;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-size: 3em;
 }
 
-header {
-  width: 100%;
-  text-align: center;
-  padding: 50px 0;
+/*********************
+  Navigation
+*********************/
+
+nav {
+    margin: 10px;
+    max-width: 99%;
+    height: 65px;
+    background: linear-gradient(silver, steelblue, transparent 95%);    
 }
+
+nav ul {
+    text-align: center;
+    white-space: nowrap;
+}
+
+nav li {
+    display: inline-block;
+    width: 100px;
+    padding: 7.5px;
+    margin: 2.5px;
+}
+
 nav ul li.selected {
-    /* add style to navigation - errin and added class to navigation */
     border-bottom-left-radius: 25%;
     border-top-right-radius: 25%;
     border-style: inset;
     font-size: 1em;
 }
-nav {
-    /* add style to navigation - errin */
-    max-width: inherit;
-    height: 150px;
-    margin: 1%;
-    background: linear-gradient(to top, silver, steelblue, transparent 95%); 
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-nav ul {
-    /* add style to navigation - errin * http://css-tricks.com/using-flexbox, http://caniuse.com/#search=flex-box*//
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
-}  
 
-nav ul li {
-    /* add style to navigation - errin *  source http://css-tricks.com/using-flexbox, and http://caniuse.com/#search=flex-box*//
-     -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    margin: 5% 5%;
-    list-style: none;
-    padding: 15px;
-    }
-input {
-  color: grey;
-  margin: 10px 0;
-  font-size: 1.5em;
-  text-align: center;
-}
-
+/*********************
+  Main Section
+*********************/
 .container {
-  width: 450px;
-  margin: 0 auto;
-  background-color: white;
-  text-align: center;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+    max-width: 750px;
+    margin: 0 auto;
 }
 
-#hint {
-  margin: 10px;
-  font-size: 1.6em;
+/*********************
+  Game Box
+*********************/
+
+.gbox {
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 10px;
 }
 
-#txtGuess {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+#scorebox {
+    height: 50px;
+}
+
+#hintbox {
+    height: 125px;
+    font-size: 1.6em;
+}
+
+#guessbox {
+    text-align: center;
+    height: 150px;
+    color: grey;
+    font-size: 1.5em;
+}
+
+#question {
+    display: block;
+}
+
+#txtguess {
+    display: block;
+}
+
+#submit {
+    display: block;
 }
 
 #submit,
 #restart {
-  padding: 1% 2%;
-}
-
-#score {
-  padding: 20px;
-  background-color: white;
-  width: 50%;
-  max-width: 450px;
-  position: absolute;
-  top: -60px;
-  left: 0;
-  /* centers from left */
-
-  right: 0;
-  /* centers from right */
-  /*    display: none;  hide on load */
-
-  -webkit-border-radius: 0 0 10px 10px;
-  -moz-border-radius: 0 0 10px 10px;
-  border-radius: 0 0 10px 10px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.3em;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
+    padding: 1% 2%;
 }
 
 #result {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%);
-  transform: translateX(-50%);
-  border-radius: 10px;
-  padding: 10px;
-  display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
 }
 
 #resultText {
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  font-size: 3em;
-}
-
-#guessesText {
-  font-size: 1.5em;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-size: 3em;
 }
 
 #restart {
-  display: none;
-  margin: 10px 0;
+    display: none;
+    margin: 10px 0;
 }
+
+#guessesText {
+    font-size: 1.5em;
+}
+
+
+/*********************
+  Footer
+*********************/
+
+
+
+
+
+
