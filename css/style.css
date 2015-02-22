@@ -2,6 +2,7 @@ header {
   width: 100%;
   text-align: center;
   padding: 75px 0;
+  list-style: none;
 }
 
 input {
@@ -156,4 +157,26 @@ h2 {
 nav {
   padding-top: 100px;
   text-align: center;
+}
+/*Added by Javid below for example for iPhone screen to make it mobile*/
+
+@media only screen and (max-width: 375px) {
+  h1 {
+    color: red;
+    font-size: 10px;
+  }
+  h2 {
+    color: red;
+    font-size: 10px;
+  }
+  html,
+  body {
+    background-repeat: repeat;
+    background-image: url("../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg");
+    height: 667px;
+    width: auto;
+  }
+  .footer {
+    font-size: 10px;
+  }
 }
