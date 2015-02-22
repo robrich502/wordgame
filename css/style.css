@@ -1,81 +1,119 @@
-header {
-  width: 100%;
+/*********************
+  Global Styles
+*********************/
+
+* {
+  font-size: 1em;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  background: url(../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: blue;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-size: 3em;
   text-align: center;
-  padding: 75px 0;
-  list-style: none;
 }
 
-input {
-  color: grey;
-  margin: 10px 0;
-  font-size: 1.5em;
+h2 {
   text-align: center;
 }
+/*********************
+  Navigation
+*********************/
 
-#page {
-  min-height: 100%;
+nav {
+  margin: 10px;
+  max-width: 99%;
+  height: 65px;
+  background: linear-gradient(silver, steelblue, transparent 95%);
 }
 
-#main {
-  overflow: auto;
-  padding-bottom: 100px;
+nav ul {
+  text-align: center;
+  white-space: nowrap;
 }
+
+nav li {
+  display: inline-block;
+  width: 100px;
+  padding: 7.5px;
+  margin: 2.5px;
+}
+
+nav ul li.selected {
+  border-bottom-left-radius: 25%;
+  border-top-right-radius: 25%;
+  border-style: inset;
+  font-size: 1em;
+}
+/*********************
+  Main Section
+*********************/
 
 .container {
-  width: 450px;
+  max-width: 750px;
   margin: 0 auto;
-  background-color: white;
+}
+/*********************
+  Game Box
+*********************/
+
+.gbox {
   text-align: center;
-  padding: 20px;
+  background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-}
-/*
-footer {
-  text-align: center;
-  font-family: bold monospace;
-}
-*/
-
-#hint {
   margin: 10px;
+}
+
+#scorebox {
+  height: 50px;
+}
+
+#hintbox {
+  height: 125px;
   font-size: 1.6em;
 }
 
-#txtGuess {
+#guessbox {
+  text-align: center;
+  height: 150px;
+  color: grey;
+  font-size: 1.5em;
+}
+
+#question {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+#txtguess {
+  display: block;
+}
+
+#submit {
+  display: block;
 }
 
 #submit,
 #restart {
   padding: 1% 2%;
-}
-
-#score {
-  padding: 20px;
-  background-color: white;
-  width: 50%;
-  max-width: 450px;
-  position: absolute;
-  top: -60px;
-  left: 0;
-  /* centers from left */
-
-  right: 0;
-  /* centers from right */
-  /*    display: none;  hide on load */
-
-  -webkit-border-radius: 0 0 10px 10px;
-  -moz-border-radius: 0 0 10px 10px;
-  border-radius: 0 0 10px 10px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.3em;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
 }
 
 #result {
@@ -95,15 +133,17 @@ footer {
   font-size: 3em;
 }
 
-#guessesText {
-  font-size: 1.5em;
-}
-
 #restart {
   display: none;
   margin: 10px 0;
-  >>>>>>> upstream/master
 }
+
+#guessesText {
+  font-size: 1.5em;
+}
+/*********************
+  Footer
+*********************/
 
 .footer {
   width: 100%;
@@ -113,67 +153,20 @@ footer {
   text-align: center;
   background-color: #ccc;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  font-size: 1em;
-  font-family: 'Ubuntu', sans-serif;
-  text-decoration: none;
-  text-align: center;
-}
-
-html,
-body {
-  background: url(../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: 'Ubuntu', sans-serif;
-  width: 100%;
-  /*  height: 100%;*/
-
-  background-color: steelblue;
-}
-
-form {
-  font-size: 1.25em;
-}
-
-h1 {
-  color: blue;
-  /*changed h1 to blue*/
-  /* background-color: black; */
-  /* removed background color behind h1, as it was too prominent -Joshua Sachtleben */
-
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  font-size: 3em;
-  text-align: center;
-}
-
-h2 {
-  text-align: center;
-}
-
-nav {
-  padding-top: 100px;
-  text-align: center;
-}
 /*Added by Javid below for example for iPhone screen to make it mobile*/
 
 @media only screen and (max-width: 375px) {
   h1 {
-    color: red;
-    font-size: 10px;
+    font-size: 20px;
   }
   h2 {
-    color: red;
-    font-size: 10px;
+    font-size: 15px;
   }
-  html,
   body {
     background-repeat: repeat;
+    background-size: cover;
     background-image: url("../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg");
-    height: 667px;
+    height: auto;
     width: auto;
   }
   .footer {

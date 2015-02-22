@@ -1,54 +1,49 @@
 <!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /> /<!--added by Javid for mobile view*/-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <title>Word Game - US States Edition</title>
   <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
   <script src="javascript/secretwords.js"></script>
   <script src="javascript/main.js"></script>
 </head>
 
-<body onload="OnLoad()">
+<body class="container" onload="OnLoad()">
   <header>
-    <h1>Word Game - United States Edition</h1>
-    <h2>US States!</h2>
     <nav>
       <ul>
-        <li><a href="index.html">About this game</a>
+        <li><a href="about.html">About</a>
         </li>
-        <li><a href="WordGame.html">Play Game</a>
+        <li><a href="players.html">Top Scores</a>
         </li>
-        <li><a href="players.html">View Top Scores</a>
+        <li><a href="index.html">Quit</a>
         </li>
-
       </ul>
     </nav>
   </header>
-  <div class="container">
-    <h2 id="hint"></h2>
-    <div id="score"></div>
-    <div>
-      <label id="question">What State do you guess?</label>
-      <!-- Added autofocus attribute. --Korey -->
-      <input type="text" id="txtGuess" name="txtGuess" autofocus>
-      <button id="submit" type="button" onclick="CheckWord()">Submit</button>
+  <div class="gamebox">
+    <div id="scorebox" class="gbox">
     </div>
-    <div id="result">
+    <div id="hintbox" class="gbox">
+    </div>
+    <div id="resultbox" class="gbox">
       <p id="resultText"></p>
       <p id="guessesText"></p>
       <button id="restart" type="button" onclick="restartGame()">Restart?</button>
     </div>
-    <footer>
-      <div class="footer">
-        <p>Copyright &copy; Wednesday Night CodeLouisville Front End Developer class</p>
-      </div>
-    </footer>
+    <div id="guessbox" class="gbox">
+      <label id="question">What State do you guess?</label>
+      <input type="text" id="txtGuess" autofocus>
+      <button id="submit" type="button" onclick="CheckWord()">Submit</button>
+    </div>
+  </div>
+  <div class="footer">
+    <p>Copyright &copy; Wednesday Night CodeLouisville Front End Developer class</p>
+  </div>
 </body>
 
 </html>
