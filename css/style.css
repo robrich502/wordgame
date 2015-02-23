@@ -1,152 +1,175 @@
-
 /*********************
   Global Styles
 *********************/
 
 * {
-    font-size: 1em;
-    font-family: 'Ubuntu', sans-serif;
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  font-size: 1em;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 html {
-    background: url(../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url(../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
-    color: blue;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    font-size: 3em;
+  color: blue;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-size: 3em;
+  text-align: center;
 }
 
+h2 {
+  text-align: center;
+}
 /*********************
   Navigation
 *********************/
 
 nav {
-    margin: 10px;
-    max-width: 99%;
-    height: 65px;
-    background: linear-gradient(silver, steelblue, transparent 95%);    
+  margin: 10px;
+  max-width: 99%;
+  height: 65px;
+  background: linear-gradient(silver, steelblue, transparent 95%);
 }
 
 nav ul {
-    text-align: center;
-    white-space: nowrap;
+  text-align: center;
+  white-space: nowrap;
 }
 
 nav li {
-    display: inline-block;
-    width: 100px;
-    padding: 7.5px;
-    margin: 2.5px;
+  display: inline-block;
+  width: 100px;
+  padding: 7.5px;
+  margin: 2.5px;
 }
 
 nav ul li.selected {
-    border-bottom-left-radius: 25%;
-    border-top-right-radius: 25%;
-    border-style: inset;
-    font-size: 1em;
+  border-bottom-left-radius: 25%;
+  border-top-right-radius: 25%;
+  border-style: inset;
+  font-size: 1em;
 }
-
 /*********************
   Main Section
 *********************/
-.container {
-    max-width: 750px;
-    margin: 0 auto;
-}
 
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+}
 /*********************
   Game Box
 *********************/
 
 .gbox {
-    text-align: center;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    margin: 10px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin: 10px;
 }
 
 #scorebox {
-    height: 50px;
+  height: 50px;
 }
 
 #hintbox {
-    height: 125px;
-    font-size: 1.6em;
+  height: 125px;
+  font-size: 1.6em;
 }
 
 #guessbox {
-    text-align: center;
-    height: 150px;
-    color: grey;
-    font-size: 1.5em;
+  text-align: center;
+  height: 150px;
+  color: grey;
+  font-size: 1.5em;
 }
 
 #question {
-    display: block;
+  display: block;
 }
 
 #txtguess {
-    display: block;
+  display: block;
 }
 
 #submit {
-    display: block;
+  display: block;
 }
 
 #submit,
 #restart {
-    padding: 1% 2%;
+  padding: 1% 2%;
 }
 
 #result {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%);
-    transform: translateX(-50%);
-    border-radius: 10px;
-    padding: 10px;
-    display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
 }
 
 #resultText {
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    font-size: 3em;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-size: 3em;
 }
 
 #restart {
-    display: none;
-    margin: 10px 0;
+  display: none;
+  margin: 10px 0;
 }
 
 #guessesText {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
-
-
 /*********************
   Footer
 *********************/
 
+.footer {
+  width: 100%;
+  clear: both;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  background-color: #ccc;
+}
+/*Added by Javid below for example for iPhone screen to make it mobile*/
 
-
-
-
-
+@media only screen and (max-width: 375px) {
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  body {
+    background-repeat: repeat;
+    background-size: cover;
+    background-image: url("../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg");
+    height: auto;
+    width: auto;
+  }
+  .footer {
+    font-size: 10px;
+  }
+}
