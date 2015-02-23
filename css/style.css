@@ -26,11 +26,6 @@ h1 {
   color: blue;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   font-size: 3em;
-  text-align: center;
-}
-
-h2 {
-  text-align: center;
 }
 /*********************
   Navigation
@@ -158,9 +153,11 @@ nav ul li.selected {
 @media only screen and (max-width: 375px) {
   h1 {
     font-size: 20px;
+    text-align: center;
   }
   h2 {
     font-size: 15px;
+    text-align: center;
   }
   body {
     background-repeat: repeat;
