@@ -21,12 +21,19 @@ html {
     background: url(../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: grey;
 }
 
 h1 {
     color: blue;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     font-size: 3em;
+}
+
+h2 {
+  color: red;
+  font-size: 2em;
+  text-align: center;
 }
 
 /*********************
@@ -57,6 +64,15 @@ nav ul li.selected {
     border-top-right-radius: 25%;
     border-style: inset;
     font-size: 1em;
+}
+
+.banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    text-align: center;
+    height: auto;
 }
 
 /*********************
@@ -145,8 +161,43 @@ nav ul li.selected {
   Footer
 *********************/
 
+=======
+.footer {
+  width: 100%;
+  clear: both;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  font-size: 10px;
+}
+/*Added by Javid below for example for iPhone screen to make it mobile*/
 
-
-
-
-
+@media only screen and (max-width: 375px) {
+  .banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    text-align: center;
+    width: 100%;
+    height: auto;
+  }
+  html {
+    height: 1250px;
+    width: auto;
+  }
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 15px;
+    text-align: center;
+  }
+  body {
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-image: url("../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg");
+    height: auto;
+    width: auto;
+  }
