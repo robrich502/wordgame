@@ -10,6 +10,18 @@
   <script src="javascript/secretwords.js"></script>
   <script src="javascript/main.js"></script>
 </head>
+<script type="text/javascript">
+  var switchTo5x = true;
+</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">
+  stLight.options({
+    publisher: "785eefae-83f8-4d22-8b0f-a66949f29f72",
+    doNotHash: false,
+    doNotCopy: false,
+    hashAddressBar: false
+  });
+</script>
 
 <body class="container" onload="OnLoad()">
   <header>
@@ -17,7 +29,7 @@
     <h1>Word Game - United States Edition</h1>
     <h2>US States!</h2>
 -->
- <img src="img/WorkGameBanner.png" alt="" class="banner">
+    <img src="img/WorkGameBanner.png" alt="" class="banner">
     <nav>
       <ul>
         <li><a href="about.html">About</a>
@@ -44,11 +56,18 @@
       <input type="text" id="txtGuess" autofocus>
       <button id="submit" type="button" onclick="CheckWord()">Submit</button>
     </div>
-  </div>
-  <div class="footer">
-    <a href="http://www.codelouisville.org/"><img src="img/codelouisvillesmallr.png" alt=""></a>
+    <span class='st__hcount' displayText=''></span>
+    <span class='st_facebook_hcount' displayText='Facebook'></span>
+    <span class='st_twitter_hcount' displayText='Tweet'></span>
+    <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+    <span class='st_pinterest_hcount' displayText='Pinterest'></span>
+    <span class='st_email_hcount' displayText='Email'></span>
+
+    <div class="footer">
+      <a href="http://www.codelouisville.org/"><img src="img/codelouisvillesmallr.png" alt="">
+      </a>
       <p>Copyright &copy; Wednesday Night CodeLouisville Front End Developer class</p>
-  </div>
+    </div>
 
 
 </body>
