@@ -22,6 +22,8 @@ body {
   
   background-size: cover;
   background-color: grey;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -182,7 +184,7 @@ nav ul li.selected {
     height: auto;
   }
   html {
-    height: 1250px;
+    height: 100%;
     width: auto;
   }
   h1 {
