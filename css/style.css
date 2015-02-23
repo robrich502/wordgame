@@ -16,10 +16,12 @@ a {
   text-decoration: none;
 }
 
-html {
+body {
   background: url(../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg);
-  background-repeat: no-repeat;
+  /*  background-repeat: no-repeat;*/
+  
   background-size: cover;
+  background-color: grey;
 }
 
 h1 {
@@ -71,7 +73,7 @@ nav ul li.selected {
   margin-top: auto;
   text-align: center;
   /* width: 75%; */
-
+  
   height: auto;
 }
 /*********************
@@ -179,6 +181,10 @@ nav ul li.selected {
     width: 100%;
     height: auto;
   }
+  html {
+    height: 1250px;
+    width: auto;
+  }
   h1 {
     font-size: 20px;
     text-align: center;
@@ -188,7 +194,7 @@ nav ul li.selected {
     text-align: center;
   }
   body {
-    background-repeat: repeat;
+    background-repeat: repeat-y;
     background-size: cover;
     background-image: url("../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg");
     height: auto;
