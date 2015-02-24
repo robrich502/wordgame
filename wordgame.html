@@ -31,7 +31,7 @@
         </div>
         <div id="guessbox" class="gbox">
             <label id="question">What State do you guess?</label>
-            <input type="text" id="txtGuess" autofocus>   
+            <input type="text" id="txtGuess" autofocus onkeydown="if (event.keyCode == 13) document.getElementById('submit').click()">   
             <button id="submit" type="button" onclick="CheckWord()">Submit</button>
         </div>          
     </div>               
