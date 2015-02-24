@@ -9,10 +9,26 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="javascript/secretwords.js"></script>
   <script src="javascript/main.js"></script>
+  <script type="text/javascript">
+    var switchTo5x = true;
+  </script>
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">
+    stLight.options({
+      publisher: "785eefae-83f8-4d22-8b0f-a66949f29f72",
+      doNotHash: false,
+      doNotCopy: false,
+      hashAddressBar: false
+    });
+  </script>
+
+
 </head>
+
 
 <body class="container" onload="OnLoad()">
   <header>
+    <img src="img/WorkGameBanner.png" alt="" class="banner">
     <nav>
       <ul>
         <li><a href="about.html">About</a>
@@ -24,7 +40,7 @@
       </ul>
     </nav>
   </header>
-  <img src="img/WorkGameBanner.png" alt="" class="banner">
+
   <div class="gamebox">
     <div id="scorebox" class="gbox">
     </div>
@@ -41,11 +57,17 @@
       <button id="submit" type="button" onclick="CheckWord()">Submit</button>
     </div>
   </div>
+  <span class='st__hcount' displayText=''></span>
+  <span class='st_facebook_hcount' displayText='Facebook'></span>
+  <span class='st_twitter_hcount' displayText='Tweet'></span>
+  <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+  <span class='st_pinterest_hcount' displayText='Pinterest'></span>
+  <span class='st_email_hcount' displayText='Email'></span>
   <footer>
     <div class="footer">
       <a href="http://www.codelouisville.org/"><img src="img/codelouisvillesmallr.png" alt="">
       </a>
-      <p>Copyright &copy; Wednesday Night CodeLouisville Front End Developer class</p>
+      <p>Copyright 2015 &copy; Wednesday Night CodeLouisville Front End Developer class</p>
     </div>
   </footer>
 </body>
