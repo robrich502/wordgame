@@ -17,11 +17,13 @@ a {
     text-decoration: none;
 }
 
-html {
+body {
     background: url(../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: grey;
+   margin: 0;
+  padding: 0;
 }
 
 h1 {
