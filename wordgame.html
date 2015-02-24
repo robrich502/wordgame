@@ -30,8 +30,8 @@
             <button id="restart" type="button" onclick="restartGame()">Restart?</button>
         </div>
         <div id="guessbox" class="gbox">
-            <label id="question">What State do you guess?</label>
-            <input type="text" id="txtGuess" autofocus>   
+            <label id="question">What State do you guess from the hint given above?</label>
+            <input type="text" id="txtGuess" autofocus onkeydown="if (event.keyCode == 13) document.getElementById('submit').click()">   
             <button id="submit" type="button" onclick="CheckWord()">Submit</button>
         </div>          
     </div>               
