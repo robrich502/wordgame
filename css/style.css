@@ -16,21 +16,19 @@ a {
   text-decoration: none;
 }
 
-body {
+html {
   background: url(../img/Wrinkled_Notebook_Paper___3_by_djsoundwav.jpg);
-  /*  background-repeat: no-repeat;*/
+  background-repeat: no-repeat;
+  /*added no-repeat back-Javid*/
   
   background-size: cover;
   background-color: grey;
-  margin: 0;
-  padding: 0;
 }
 
 h1 {
   color: blue;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   font-size: 3em;
-  text-align: center;
 }
 
 h2 {
@@ -74,8 +72,6 @@ nav ul li.selected {
   margin-right: auto;
   margin-top: auto;
   text-align: center;
-  /* width: 75%; */
-  
   height: auto;
 }
 /*********************
@@ -162,6 +158,7 @@ nav ul li.selected {
   Footer
 *********************/
 
+=====
 .footer {
   width: 100%;
   clear: both;
@@ -169,7 +166,6 @@ nav ul li.selected {
   bottom: 0px;
   text-align: center;
   font-size: 10px;
-  /*  background-color: #ccc;*/
 }
 /*Added by Javid below for example for iPhone screen to make it mobile*/
 
@@ -185,6 +181,8 @@ nav ul li.selected {
   }
   html {
     height: 100%;
+    /*made height 100%-Javid*/
+    
     width: auto;
   }
   h1 {
@@ -203,3 +201,4 @@ nav ul li.selected {
     width: auto;
   }
 }
+/*added closing bracket-Javid

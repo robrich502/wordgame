@@ -24,9 +24,9 @@ function resetPlayer() {
 // this function generates a random number and picks one of the items out of the array we declared above.
 // the function returns a object with two properties which are strings (word, and hint);
 function GetSecretWord() {
-  var min = 0,
-    max = secretWords.length - 1;
-  var rand = min + Math.random() * (max + 1 - min);
+  
+    max = secretWords.length;
+  var rand = Math.random() * max;
   var randIndex = Math.floor(rand);
   return secretWords[randIndex];
 }
