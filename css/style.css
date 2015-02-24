@@ -185,7 +185,7 @@ nav ul li.selected {
     height: auto;
   }
   html {
-    height: 1250px;
+    height: 100%;
     width: auto;
   }
   h1 {
