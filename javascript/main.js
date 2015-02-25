@@ -24,9 +24,9 @@ function resetPlayer() {
 // this function generates a random number and picks one of the items out of the array we declared above.
 // the function returns a object with two properties which are strings (word, and hint);
 function GetSecretWord() {
-  var min = 0,
-    max = secretWords.length - 1;
-  var rand = min + Math.random() * (max + 1 - min);
+  
+    max = secretWords.length;
+  var rand = Math.random() * max;
   var randIndex = Math.floor(rand);
   return secretWords[randIndex];
 }
@@ -50,10 +50,10 @@ function CheckWord() {
 
     // Remove that question and go to another question.
     // Also, reset the text field to be blank. --Korey
-    var completed = secretWords.indexOf(currentSecretWord);
-    if (completed !== -1) {
-      secretWords.splice(completed, 1);
-    }
+    var correctIndex = secretWords.indexOf(currentSecretWord);
+    var correctAnswer = secretWords.splice(correctIndex, 1);
+    correctWords.push(correctAnswer);
+
     document.getElementById('txtGuess').value = "";
     OnLoad();
 
@@ -81,7 +81,7 @@ function updateScore(result) {
   else {
     player.guesses -= 1;
     if(player.guesses <= 0) {
-      finalScore = player.score;
+      player.finalScore = player.score;
       player.score = 0;
     }
   }
@@ -142,6 +142,18 @@ function restartGame() {
   resultDiv.style.display = 'none';
   submitButton.disabled = false;
   restartButton.style.display = 'none';
+  
+  resetSecretWord(secretWords, correctWords);
+  
   resetPlayer();
   OnLoad();
 }
+
+var resetSecretWord = function(mainArray, tempArray) {
+  for (var i = 0; i < tempArray.length; i++) {
+    mainArray.push(tempArray[i][0]);    
+  }
+  tempArray.length = 0;
+}
+
+
