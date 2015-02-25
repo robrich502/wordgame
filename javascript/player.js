@@ -2,5 +2,5 @@
 var objPlayer = {
     name: "",
     score: "",
-    attempts: ""    
+    attempts: ""
 }

@@ -11,7 +11,25 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+
 }
+
+/*
+body {
+
+
+
+	background-image: -webkit-linear-gradient(top, #000, #fff);
+	background-image: -moz-linear-gradient(top, #000, #fff);
+	background-image: -o-linear-gradient(top, #000, #fff);
+	background-image: -ms-linear-gradient(top, #000, #fff);
+	background-image: linear-gradient(to bottom, #000, #fff);
+	width: 1667px;
+	height: 1000px;
+
+
+}
+*/
 
 a {
     text-decoration: none;
@@ -36,7 +54,7 @@ h2 {
 nav {
     margin: 10px;
     max-width: 99%;
-    height: 65px; 
+    height: 65px;
 }
 
 nav ul {
@@ -183,9 +201,8 @@ nav ul li.selected {
     font-size: 20px;
     text-align: center;
   }
- 
+
  h2 {
     font-size: 15px;
     text-align: center;
   }
- 
