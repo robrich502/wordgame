@@ -63,3 +63,5 @@ var secretWords = [
     word: "wisconsin",
     hint: "Badgers and yellow cheese (sometimes as hats)."
 }];
+
+var correctWords = [];

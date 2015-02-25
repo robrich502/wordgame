@@ -50,10 +50,10 @@ function CheckWord() {
 
     // Remove that question and go to another question.
     // Also, reset the text field to be blank. --Korey
-    var completed = secretWords.indexOf(currentSecretWord);
-    if (completed !== -1) {
-      secretWords.splice(completed, 1);
-    }
+    var correctIndex = secretWords.indexOf(currentSecretWord);
+    var correctAnswer = secretWords.splice(correctIndex, 1);
+    correctWords.push(correctAnswer);
+
     document.getElementById('txtGuess').value = "";
     OnLoad();
 
@@ -142,6 +142,18 @@ function restartGame() {
   resultDiv.style.display = 'none';
   submitButton.disabled = false;
   restartButton.style.display = 'none';
+  
+  resetSecretWord(secretWords, correctWords);
+  
   resetPlayer();
   OnLoad();
 }
+
+var resetSecretWord = function(mainArray, tempArray) {
+  for (var i = 0; i < tempArray.length; i++) {
+    mainArray.push(tempArray[i][0]);    
+  }
+  tempArray.length = 0;
+}
+
+
