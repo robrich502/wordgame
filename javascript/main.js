@@ -81,7 +81,7 @@ function updateScore(result) {
   else {
     player.guesses -= 1;
     if(player.guesses <= 0) {
-      finalScore = player.score;
+      player.finalScore = player.score;
       player.score = 0;
     }
   }
