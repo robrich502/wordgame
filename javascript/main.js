@@ -43,7 +43,7 @@ function OnLoad() {
 
 //this function creates a timer which allows user 20 seconds to make a guess or they get marked wrong
 function guessTimer (){
-  document.getElementById()
+  
   
 }
 
@@ -138,6 +138,7 @@ function displayResult(result) {
     guessesDivText.innerHTML = '';
     resultDiv.style.display = 'none';
     submitButton.disabled = false;
+    document.getElementById('txtGuess').value() = '';
   }, 2000);
 }
 
