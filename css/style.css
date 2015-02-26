@@ -116,6 +116,7 @@ nav ul li.selected {
 
 #submit {
     display: block;
+    margin: 0 auto;
 }
 
 #submit,
