@@ -5,7 +5,7 @@ var MAX_ATTEMPTS = 3;
 var currentSecretWord;
 var scoreLoaded = false;
 
-// create a player objet, to hold all the variables associated with a player--rr
+// create a player object, to hold all the variables associated with a player--rr
 var player = {
     name: "",
     score: 0,
@@ -39,13 +39,15 @@ function OnLoad() {
   player.guesses = MAX_ATTEMPTS;
   // Focus back on the text input for the next question. --Korey
   document.getElementById('txtGuess').focus();
+  //a timer which allows user 20 seconds to make a guess or they get marked wrong -- Pranay
+  setTimeout(function(){
+    alert("Sorry you took too long!");
+    OnLoad();
+  },2000)
 }
 
-//this function creates a timer which allows user 20 seconds to make a guess or they get marked wrong
-function guessTimer (){
-  
-  
-}
+
+
 
 function CheckWord() {
   var word = document.getElementById('txtGuess').value;
