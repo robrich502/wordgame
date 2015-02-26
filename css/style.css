@@ -109,12 +109,14 @@ nav ul li.selected {
     display: block;
 }
 
-#txtguess {
-    display: block;
+#txtGuess {
+    width: 50%;
+    margin: 1% 0;
 }
 
 #submit {
     display: block;
+    margin: 1% auto;
 }
 
 #submit,
