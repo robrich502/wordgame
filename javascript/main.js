@@ -41,6 +41,12 @@ function OnLoad() {
   document.getElementById('txtGuess').focus();
 }
 
+//this function creates a timer which allows user 20 seconds to make a guess or they get marked wrong
+function guessTimer (){
+  document.getElementById()
+  
+}
+
 function CheckWord() {
   var word = document.getElementById('txtGuess').value;
 
