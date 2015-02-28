@@ -11,7 +11,7 @@ var player = {
     score: 0,
     guesses: 0,
     finalScore: 0
-}
+};
 
 // set the player object back to its defaults
 function resetPlayer() {
@@ -38,15 +38,16 @@ function onLoad() {
   document.getElementById('hint').innerHTML = "<p>" + currentSecretWord.hint + "</p>";
   player.guesses = MAX_ATTEMPTS;
   //make the value of textGuess null(in case it has a value from previous uses of OnLoad function)
-  textGuess.value() = '';
+  textGuess.value = '';
   // Focus back on the text input for the next question. --Korey
   textGuess.focus();
   //a timer which allows user 20 seconds to make a guess or they get marked wrong -- Pranay
-  setTimeout(function(){
+
+ /* setTimeout(function(){
     alert("Sorry you took too long!");
-    
     restartGame();
-  },2000)
+  },2000)*/
+
 }
 
 function checkWord() {
