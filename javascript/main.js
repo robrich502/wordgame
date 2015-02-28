@@ -46,7 +46,7 @@ function OnLoad() {
   setTimeout(function(){
     alert("Sorry you took too long!");
     
-    OnLoad();
+    restartGame();
   },2000)
 }
 
@@ -67,7 +67,7 @@ function CheckWord() {
     correctWords.push(correctAnswer);
 
     document.getElementById('txtGuess').value = "";
-    OnLoad();
+    
 
   } else {
     updateScore(false);
@@ -76,6 +76,7 @@ function CheckWord() {
     // After wrong answer, focus and select the text in the text field. --Korey
     document.getElementById('txtGuess').select();
   }
+  OnLoad();
 }
 
 function updateScore(result) {
