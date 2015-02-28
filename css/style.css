@@ -4,7 +4,6 @@
 *********************/
 
 * {
-    font-size: 1em;
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
@@ -15,18 +14,6 @@
 
 a {
     text-decoration: none;
-}
-
-h1 {
-    color: blue;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    font-size: 3em;
-}
-
-h2 {
-  color: red;
-  font-size: 2em;
-  text-align: center;
 }
 
 /*********************
@@ -58,20 +45,12 @@ nav ul li.selected {
     font-size: 1em;
 }
 
-.banner {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    text-align: center;
-    height: auto;
-}
-
 /*********************
   Main Section
 *********************/
+
 .container {
-    max-width: 750px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -95,19 +74,26 @@ nav ul li.selected {
     color: white;	
 }
 
+.gbox p {
+    font-size: 1.4em;
+}
 
 #scorebox {
     height: 100px;
 }
 
-#hintbox {
-    height: 125px;  
+#hintbox {   
+    height: 125px;   
+}
+
+#hint {
+    padding: 10px;
 }
 
 #guessbox {
     text-align: center;
     height: 150px;
-    color: grey; 
+    color: grey;   
 }
 
 #question {
@@ -116,7 +102,8 @@ nav ul li.selected {
 
 #txtGuess {
     width: 50%;
-    margin: 1% 0;
+    margin: 2.5% 0;
+    font-size: 1.4em;
 }
 
 #submit {
@@ -151,43 +138,57 @@ nav ul li.selected {
     margin: 10px 0;
 }
 
+button {
+	-moz-box-shadow: 0px 0px 0px 2px #9fb4f2;
+	-webkit-box-shadow: 0px 0px 0px 2px #9fb4f2;
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2), color-stop(1, #476e9e));
+	background:-moz-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);
+	background-color:#7892c2;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+
+button:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #476e9e), color-stop(1, #7892c2));
+	background:-moz-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-webkit-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-o-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-ms-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#476e9e', endColorstr='#7892c2',GradientType=0);
+	background-color:#476e9e;
+}
+
+button:active {
+	position:relative;
+	top:1px;
+}
+
+
 /*********************
   Footer
 *********************/
 
 .footer {
-  width: 100%;
-  clear: both;
-  position: fixed;
-  bottom: 0px;
-  text-align: center;
-  font-size: 10px;
+    text-align: center;
 }
 /*Added by Javid below for example for iPhone screen to make it mobile*/
 
 @media only screen and (max-width: 375px) {
-  .banner {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    text-align: center;
-    width: 100%;
-    height: auto;
-  }
-
-  html {
-    height: 100%;
-    width: auto;
-  }
-
-  h1 {
-    font-size: 20px;
-    text-align: center;
-  }
- 
- h2 {
-    font-size: 15px;
-    text-align: center;
-  }
- 
+}
