@@ -89,20 +89,25 @@ nav ul li.selected {
     margin: 10px;
 }
 
+.gbox h2 {
+	width: 100%;	
+	background-color: steelblue;
+    color: white;	
+}
+
+
 #scorebox {
-    height: 50px;
+    height: 100px;
 }
 
 #hintbox {
-    height: 125px;
-    font-size: 1.6em;
+    height: 125px;  
 }
 
 #guessbox {
     text-align: center;
     height: 150px;
-    color: grey;
-    font-size: 1.5em;
+    color: grey; 
 }
 
 #question {
@@ -145,11 +150,6 @@ nav ul li.selected {
     display: none;
     margin: 10px 0;
 }
-
-#guessesText {
-    font-size: 1.5em;
-}
-
 
 /*********************
   Footer

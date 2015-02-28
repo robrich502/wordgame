@@ -6,6 +6,7 @@
         <title>Word Game - US States Edition</title>
         <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="javascript/secretwords.js"></script>
         <script src="javascript/main.js"></script> 
     </head>
@@ -24,8 +25,12 @@
         </header>
         <div class="gamebox">
             <div id="scorebox" class="gbox">
+				<h2>Player Score</h2>
+				<div id="score"></div>
             </div>
             <div id="hintbox" class="gbox">
+				<h2>Hints</h2>
+				<div id="hint"></div>
             </div>
             <div id="resultbox" class="gbox">
                 <p id="resultText"></p>
@@ -33,8 +38,7 @@
                 <button id="restart" type="button" onclick="restartGame()">Restart?</button>
             </div>
             <div id="guessbox" class="gbox">
-                <label id="question">What State do you guess from the hint given above? You have 20 seconds to answer(don't
-                try to google it!)</label>
+				<h2>What is your Guess?</h2>             				
                 <input type="text" id="txtGuess" autofocus onkeydown="if (event.keyCode == 13) document.getElementById('submit').click()">   
                 <button id="submit" type="button" onclick="checkWord()">Submit</button>
             </div>          
