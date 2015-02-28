@@ -23,19 +23,20 @@ function resetPlayer() {
 
 // this function generates a random number and picks one of the items out of the array we declared above.
 // the function returns a object with two properties which are strings (word, and hint);
-function getSecretWord() {  
+function GetSecretWord() {
+  
     max = secretWords.length;
-    var rand = Math.random() * max;
-    var randIndex = Math.floor(rand);
-    return secretWords[randIndex];
+  var rand = Math.random() * max;
+  var randIndex = Math.floor(rand);
+  return secretWords[randIndex];
 }
 
 // this function is currently assigned to the OnLoad event of the body of the document.  So when the OnLoad event fires off
 // for the body of the html document, the code in this function will automatically execute.
 function onLoad() {
   var textGuess = document.getElementById('txtGuess');//creating a variable for the text of the guess(pranay)
-  currentSecretWord = getSecretWord();
-  document.getElementById('hint').innerHTML = "<p>" + currentSecretWord.hint + "</p>";
+  currentSecretWord = GetSecretWord();
+  document.getElementById('hintbox').innerHTML = "<p>" + currentSecretWord.hint + "</p>";
   player.guesses = MAX_ATTEMPTS;
   //make the value of textGuess null(in case it has a value from previous uses of OnLoad function)
   textGuess.value() = '';
@@ -49,7 +50,10 @@ function onLoad() {
   },2000)
 }
 
-function checkWord() {
+
+
+
+function CheckWord() {
   var word = document.getElementById('txtGuess').value;
 
   if (word.toLowerCase() == currentSecretWord.word) {
@@ -62,7 +66,8 @@ function checkWord() {
     var correctAnswer = secretWords.splice(correctIndex, 1);
     correctWords.push(correctAnswer);
 
-    document.getElementById('txtGuess').value = "";    
+    document.getElementById('txtGuess').value = "";
+    
 
   } else {
     updateScore(false);
@@ -93,7 +98,7 @@ function updateScore(result) {
       player.score = 0;
     }
   }
-  document.getElementById('score').innerHTML = "<p>Score: " + player.score + "</p>";
+  document.getElementById('scorebox').innerHTML = "Score: " + player.score;
 }
 
 function loadScoreDiv() {
@@ -164,3 +169,5 @@ var resetSecretWord = function(mainArray, tempArray) {
   }
   tempArray.length = 0;
 }
+
+
