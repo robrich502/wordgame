@@ -16,6 +16,12 @@ a {
     text-decoration: none;
 }
 
+html {
+    background-image: url("/img/usa.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;  
+}
+
 /*********************
   Navigation
 *********************/
