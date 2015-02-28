@@ -23,7 +23,7 @@ function resetPlayer() {
 
 // this function generates a random number and picks one of the items out of the array we declared above.
 // the function returns a object with two properties which are strings (word, and hint);
-function GetSecretWord() {
+function getSecretWord() {
   
     max = secretWords.length;
   var rand = Math.random() * max;
@@ -33,9 +33,9 @@ function GetSecretWord() {
 
 // this function is currently assigned to the OnLoad event of the body of the document.  So when the OnLoad event fires off
 // for the body of the html document, the code in this function will automatically execute.
-function OnLoad() {
+function onLoad() {
   var textGuess = document.getElementById('txtGuess');//creating a variable for the text of the guess(pranay)
-  currentSecretWord = GetSecretWord();
+  currentSecretWord = getSecretWord();
   document.getElementById('hintbox').innerHTML = "<p>" + currentSecretWord.hint + "</p>";
   player.guesses = MAX_ATTEMPTS;
   //make the value of textGuess null(in case it has a value from previous uses of OnLoad function)
@@ -50,10 +50,7 @@ function OnLoad() {
   },2000)
 }
 
-
-
-
-function CheckWord() {
+function checkWord() {
   var word = document.getElementById('txtGuess').value;
 
   if (word.toLowerCase() == currentSecretWord.word) {
@@ -66,8 +63,7 @@ function CheckWord() {
     var correctAnswer = secretWords.splice(correctIndex, 1);
     correctWords.push(correctAnswer);
 
-    document.getElementById('txtGuess').value = "";
-    
+    document.getElementById('txtGuess').value = "";    
 
   } else {
     updateScore(false);
@@ -76,7 +72,7 @@ function CheckWord() {
     // After wrong answer, focus and select the text in the text field. --Korey
     document.getElementById('txtGuess').select();
   }
-  OnLoad();
+  onLoad();
 }
 
 function updateScore(result) {
@@ -169,5 +165,3 @@ var resetSecretWord = function(mainArray, tempArray) {
   }
   tempArray.length = 0;
 }
-
-

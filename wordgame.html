@@ -9,7 +9,7 @@
         <script src="javascript/secretwords.js"></script>
         <script src="javascript/main.js"></script> 
     </head>
-    <body class="container" onload="OnLoad()">    
+    <body class="container" onload="onLoad()">    
         <header>    
           <nav>
               <ul>
@@ -36,7 +36,7 @@
                 <label id="question">What State do you guess from the hint given above? You have 20 seconds to answer(don't
                 try to google it!)</label>
                 <input type="text" id="txtGuess" autofocus onkeydown="if (event.keyCode == 13) document.getElementById('submit').click()">   
-                <button id="submit" type="button" onclick="CheckWord()">Submit</button>
+                <button id="submit" type="button" onclick="checkWord()">Submit</button>
             </div>          
         </div>  
         <footer>
