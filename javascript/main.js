@@ -1,7 +1,6 @@
 // JavaScript source code
 
 var MAX_ATTEMPTS = 3;
-
 var currentSecretWord;
 var scoreLoaded = false;
 
@@ -35,7 +34,7 @@ function getSecretWord() {
 function onLoad() {
     var textGuess = document.getElementById('txtGuess'); //creating a variable for the text of the guess(pranay)
     currentSecretWord = getSecretWord();
-    document.getElementById('hint').innerHTML = "<p>" + currentSecretWord.hint + "</p>";
+    document.getElementById('hintbox').innerHTML = "<p>" + currentSecretWord.hint + "</p>";
     player.guesses = MAX_ATTEMPTS;
     //make the value of textGuess null(in case it has a value from previous uses of OnLoad function)
     textGuess.value = '';
@@ -94,7 +93,7 @@ function updateScore(result) {
             player.score = 0;
         }
     }
-    document.getElementById('score').innerHTML = "<p>Score: " + player.score + "</p>";
+    document.getElementById('scorebox').innerHTML = "<p>Score: " + player.score + "</p>";
 }
 
 function loadScoreDiv() {
@@ -152,9 +151,7 @@ function restartGame() {
     resultDiv.style.display = 'none';
     submitButton.disabled = false;
     restartButton.style.display = 'none';
-
     resetSecretWord(secretWords, correctWords);
-
     resetPlayer();
     onLoad();
 }
