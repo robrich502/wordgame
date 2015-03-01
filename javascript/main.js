@@ -34,12 +34,12 @@ function getSecretWord() {
 // this function is currently assigned to the OnLoad event of the body of the document.  So when the OnLoad event fires off
 // for the body of the html document, the code in this function will automatically execute.
 function onLoad() {
-  currentSecretWord = GetSecretWord();
+  currentSecretWord = getSecretWord();
   document.getElementById('hintbox').innerHTML = "<p>" + currentSecretWord.hint + "</p>";
   player.guesses = MAX_ATTEMPTS;
   
   // Focus back on the text input for the next question. --Korey
-  textGuess.focus();
+  document.getElementById('txtGuess').focus();
   
   //a timer which allows user 20 seconds to make a guess or they get marked wrong -- Pranay
   setTimeout(function(){
