@@ -93,7 +93,7 @@ function updateScore(result) {
             player.score = 0;
         }
     }
-    document.getElementById('scorebox').innerHTML = "<h2>Score: " + player.score + "</ph2";
+    document.getElementById('scorebox').innerHTML = "<p>Score: " + player.score + "</p>";
 }
 
 function loadScoreDiv() {
