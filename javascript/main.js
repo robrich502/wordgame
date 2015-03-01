@@ -26,6 +26,7 @@ function resetPlayer() {
 function getSecretWord() {
   
     max = secretWords.length;
+    console.log(max);
   var rand = Math.random() * max;
   var randIndex = Math.floor(rand);
   return secretWords[randIndex];
