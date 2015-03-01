@@ -15,6 +15,7 @@ var player = {
 
 // set the player object back to its defaults
 function resetPlayer() {
+    console.log("started resetPlayer");
     player.name = "";
     player.score = 0;
     player.guesses = 0;
