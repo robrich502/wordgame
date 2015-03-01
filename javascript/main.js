@@ -46,7 +46,7 @@ function onLoad() {
   setTimeout(function(){
     alert("Sorry you took too long!");
     
-    restartGame();
+    onLoad();
   },2000)
 }
 
