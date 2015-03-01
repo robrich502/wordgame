@@ -25,6 +25,7 @@ function resetPlayer() {
 // this function generates a random number and picks one of the items out of the array we declared above.
 // the function returns a object with two properties which are strings (word, and hint);
 function getSecretWord() {
+    console.log("started getSecretWord");
   
     max = secretWords.length;
     console.log(max);
@@ -36,6 +37,7 @@ function getSecretWord() {
 // this function is currently assigned to the OnLoad event of the body of the document.  So when the OnLoad event fires off
 // for the body of the html document, the code in this function will automatically execute.
 function onLoad() {
+  console.log("started onLoad");
   currentSecretWord = getSecretWord();
   document.getElementById('hintbox').innerHTML = "<p>" + currentSecretWord.hint + "</p>";
   player.guesses = MAX_ATTEMPTS;
@@ -54,6 +56,7 @@ function onLoad() {
 
 
 function checkWord() {
+  console.log("starting checkWord");
   var word = document.getElementById('txtGuess').value;
 
   if (word.toLowerCase() == currentSecretWord.word) {
@@ -80,6 +83,8 @@ function checkWord() {
 }
 
 function updateScore(result) {
+  
+  console.log("starting updateScore");
   // display score div if not yet displayed
   if (scoreLoaded == false) {
     loadScoreDiv();
@@ -102,6 +107,7 @@ function updateScore(result) {
 }
 
 function loadScoreDiv() {
+  console.log("loadScoreDiv has started");
 
   var scoreDiv = document.getElementById('scorebox');
   var topOffset = -60; //push the element above the viewport
@@ -117,6 +123,7 @@ function loadScoreDiv() {
 }
 
 function displayResult(result) {
+  console.log("displayResult starts");
   var resultDiv = document.getElementById('resultbox');
   var resultDivText = document.getElementById('resultText');
   var guessesDivText = document.getElementById('guessesText');
@@ -150,6 +157,7 @@ function displayResult(result) {
 }
 
 function restartGame() {
+  console.log("restartGame starts");
   var resultDiv = document.getElementById('resultbox');
   var submitButton = document.getElementById('submit');
   var restartButton = document.getElementById('restart');
