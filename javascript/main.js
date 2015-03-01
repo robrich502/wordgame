@@ -143,7 +143,7 @@ function displayResult(result) {
     guessesDivText.innerHTML = '';
     resultDiv.style.display = 'none';
     submitButton.disabled = false;
-    document.getElementById('txtGuess').value() = '';
+    document.getElementById('txtGuess').value = '';
   }, 2000);
 }
 
