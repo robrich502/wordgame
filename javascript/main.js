@@ -23,7 +23,7 @@ function resetPlayer() {
 
 // this function generates a random number and picks one of the items out of the array we declared above.
 // the function returns a object with two properties which are strings (word, and hint);
-function GetSecretWord() {
+function getSecretWord() {
   
     max = secretWords.length;
   var rand = Math.random() * max;
@@ -51,7 +51,7 @@ function onLoad() {
 
 
 
-function CheckWord() {
+function checkWord() {
   var word = document.getElementById('txtGuess').value;
 
   if (word.toLowerCase() == currentSecretWord.word) {
