@@ -17,7 +17,7 @@ a {
 }
 
 html {
-    background-image: url("/img/usa.jpg"); 
+    background-image: url("../img/usa.jpg");
     background-size: cover;
     background-repeat: no-repeat;  
 }
