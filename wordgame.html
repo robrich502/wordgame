@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Word Game - US States Edition</title>
-        <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="javascript/secretwords.js"></script>
-        <script src="javascript/main.js"></script> 
-    </head>
-    <body class="container" onload="onLoad()">    
-        <header>    
-          <nav>
-              <ul>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Word Game - US States Edition</title>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="javascript/secretwords.js"></script>
+    <script src="javascript/main.js"></script>
+</head>
+
+<body class="container" onload="onLoad()">
+    <header>
+        <nav>
+            <ul>
                 <li><a href="index.html">About</a>
                 </li>
                 <li class="selected"><a href="wordgame.html">Play Game</a>
                 </li>
                 <li><a href="players.html">Quit</a>
                 </li>
-              </ul>
-          </nav>
-        </header>
-        <div class="gamebox">
-            <div id="scorebox" class="gbox">
-				<h2>Player Score</h2>
-				<div id="score"></div>
-            </div>
-            <div id="resultbox" class="gbox">
-                <p id="resultText"></p>
-                <p id="guessesText"></p>
-                <button id="restart" type="button" onclick="restartGame()">Restart?</button>
-            </div>
-            <div id="hintbox" class="gbox">
-				<h2>Hints</h2>
-				<div id="hint"></div>
-            </div>
-            <div id="guessbox" class="gbox">
-				<h2>What is your Guess?</h2>             				
-                <input type="text" id="txtGuess" autofocus onkeydown="if (event.keyCode == 13) document.getElementById('submit').click()">   
-                <button id="submit" type="button" onclick="checkWord()">Submit</button>
-            </div>          
-        </div>  
-        <footer>
-        <div class="footer">       
+            </ul>
+        </nav>
+    </header>
+    <div class="gamebox">
+        <div id="scorebox" class="gbox">
+            <h2>Player Score</h2>
+            <div id="score"></div>
+        </div>
+        <div id="resultbox" class="gbox">
+            <p id="resultText"></p>
+            <p id="guessesText"></p>
+            <button id="restart" type="button" onclick="restartGame()">Restart?</button>
+        </div>
+        <div id="hintbox" class="gbox">
+            <h2>Hints</h2>
+            <div id="hint"></div>
+        </div>
+        <div id="guessbox" class="gbox">
+            <h2>What is your Guess?</h2>
+            <input type="text" id="txtGuess" autofocus onkeydown="if (event.keyCode == 13) document.getElementById('submit').click()">
+            <button id="submit" type="button" onclick="checkWord()">Submit</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
             <p>Copyright 2015&copy; Wednesday Night Code Louisville Front End Developer class</p>
         </div>
-      </footer>
-    </body>
+    </footer>
+</body>
+
 </html>
