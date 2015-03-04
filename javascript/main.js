@@ -47,7 +47,7 @@ function onLoad() {
     setTimeout(function(){
        console.log("setTimeout...")
        alert("Sorry you took too long!");
-       document.getElementById('hint').value='';
+       document.getElementById('hint').innerHTML='';
        },20000)
 
 }
