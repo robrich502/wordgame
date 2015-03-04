@@ -47,8 +47,9 @@ function onLoad() {
     setTimeout(function(){
        console.log("setTimeout...")
        alert("Sorry you took too long!");
-       //adding jquery to do some DOM manipulation(replacement of input box with h2)
-       $(".gbox input").replaceWith("<h2>Press Submit to start again</h2>");
+       //adding jquery to do some DOM manipulation(replacement of input box with h3,hiding of h2)
+       $(".gbox h2").hide();
+       $(".gbox input").replaceWith("<p>Press Submit to start again</p>");
        },10000)
 
 }
