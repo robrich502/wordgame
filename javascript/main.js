@@ -49,7 +49,7 @@ function onLoad() {
        alert("Sorry you took too long!");
        //document.getElementById('hint').innerHTML='';
        //document.getElementById('guessbox').innerHTML='';
-       $(".gbox guessbox").hide();
+       $(".gbox input").hide();
        },10000)
 
 }
