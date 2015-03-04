@@ -42,13 +42,12 @@ function onLoad() {
     textGuess.value = '';
     // Focus back on the text input for the next question. --Korey
     textGuess.focus();
+    
     //a timer which allows user 20 seconds to make a guess or they get marked wrong -- Pranay
-
     setTimeout(function(){
        console.log("setTimeout...")
        alert("Sorry you took too long!");
-       restartGame();
-     },20000)
+       },20000)
 
 }
 
