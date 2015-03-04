@@ -56,7 +56,7 @@ function onLoad() {
 }
 
 //adding jquery to run onLoad function when document is ready 
-$(document).ready(onLoad);
+//$(document).ready(onLoad);
 
 function checkWord() {
     var word = document.getElementById('txtGuess').value;
