@@ -48,7 +48,7 @@ function onLoad() {
        console.log("setTimeout...")
        alert("Sorry you took too long!");
        onLoad();
-     },2000)
+     },20000)
 
 }
 
