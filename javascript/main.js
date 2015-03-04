@@ -43,10 +43,10 @@ function onLoad() {
     textGuess.focus();
     //a timer which allows user 20 seconds to make a guess or they get marked wrong -- Pranay
 
-    setTimeout(function(){
-       alert("Sorry you took too long!");
-       onLoad();
-     },2000)
+    //setTimeout(function(){
+    //   alert("Sorry you took too long!");
+    //   onLoad();
+    // },2000)
 
 }
 
