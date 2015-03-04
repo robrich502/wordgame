@@ -47,8 +47,9 @@ function onLoad() {
     setTimeout(function(){
        console.log("setTimeout...")
        alert("Sorry you took too long!");
-       document.getElementById('hint').innerHTML='';
-       document.getElementById('guessbox').innerHTML='';
+       //document.getElementById('hint').innerHTML='';
+       //document.getElementById('guessbox').innerHTML='';
+       $(".gbox")
        },10000)
 
 }
