@@ -59,6 +59,7 @@ function onLoad() {
 //$(document).ready(onLoad);
 
 function checkWord() {
+    console.log("checkWord...")
     var word = document.getElementById('txtGuess').value;
 
     if (word.toLowerCase() == currentSecretWord.word) {
