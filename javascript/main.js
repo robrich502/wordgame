@@ -47,9 +47,8 @@ function onLoad() {
     setTimeout(function(){
        console.log("setTimeout...")
        alert("Sorry you took too long!");
-       //document.getElementById('hint').innerHTML='';
-       //document.getElementById('guessbox').innerHTML='';
-       $(".gbox input").hide();
+       //adding jquery to do some DOM manipulation(replacement of input box with h2)
+       $(".gbox input").replaceWith("<h2>Press Submit to start again</h2>");
        },10000)
 
 }
