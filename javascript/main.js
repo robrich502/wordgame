@@ -48,6 +48,7 @@ function onLoad() {
        console.log("setTimeout...")
        alert("Sorry you took too long!");
        document.getElementById('hint').innerHTML='';
+       document.getElementById('guessbox').innerHTML='';
        },20000)
 
 }
