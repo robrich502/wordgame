@@ -33,7 +33,7 @@ function getSecretWord() {
 // this function is currently assigned to the OnLoad event of the body of the document.  So when the OnLoad event fires off
 // for the body of the html document, the code in this function will automatically execute.
 function onLoad() {
-    console.log("started onLoad");
+    console.log("onLoad...");
     var textGuess = document.getElementById('txtGuess'); //creating a variable for the text of the guess(pranay)
     currentSecretWord = getSecretWord();
     document.getElementById('hint').innerHTML = "<p>" + currentSecretWord.hint + "</p>";
